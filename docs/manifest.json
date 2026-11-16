@@ -1,0 +1,27 @@
+{
+  "title": "Stratégie SI",
+  "generated": "2026-11-16",
+  "categories": [
+    {
+      "id": "cours",
+      "label": "Cours",
+      "items": [
+        {
+          "id": "chapitre-0-organisation-generale-du-cours",
+          "title": "Organisation générale du cours – Stratégie du SI",
+          "path": "pages/cours/chapitre-0-organisation-generale-du-cours.html"
+        },
+        {
+          "id": "chapitre-1-introduction-a-la-gouvernance-des-donnees",
+          "title": "Chapitre 1 – Introduction à la gouvernance des données",
+          "path": "pages/cours/chapitre-1-introduction-a-la-gouvernance-des-donnees.html"
+        }
+      ]
+    },
+    {
+      "id": "ateliers",
+      "label": "Ateliers",
+      "items": []
+    }
+  ]
+}
