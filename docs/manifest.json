@@ -19,8 +19,19 @@
       ]
     },
     {
-      "id": "ateliers",
-      "label": "Ateliers",
+      "id": "qcm",
+      "label": "Quiz",
+      "items": [
+        {
+          "id": "STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N1",
+          "title": "QUIZ N1",
+          "path": "pages/qcm/STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N1.html"
+        }
+      ]
+    },
+    {
+      "id": "mini-cas",
+      "label": "Mini-cas",
       "items": []
     }
   ]

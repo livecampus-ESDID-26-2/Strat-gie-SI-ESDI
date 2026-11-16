@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Convertit les Markdown (ateliers/, cours/) en PDF et/ou pages HTML statiques.
+Convertit les Markdown (qcm/, mini-cas/, cours/) en PDF et/ou pages HTML statiques.
 
 - PDF  → dossier pdf/ (Chrome headless, style académique)
 - HTML → docs/pages/ + docs/manifest.json (mini-app GitHub Pages)
@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Callable
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE_DIRS = [ROOT / "ateliers"]
+SOURCE_DIRS = [ROOT / "qcm", ROOT / "mini-cas"]
 COURSE_DIR = ROOT / "cours"
 PDF_DIR = ROOT / "pdf"
 IMAGES_DIR = ROOT / "images"
@@ -46,7 +46,8 @@ EMAIL_FROM_NAME = "Antoine MASIA"
 
 CATEGORY_LABELS = {
     "cours": "Cours",
-    "ateliers": "Ateliers",
+    "qcm": "Quiz",
+    "mini-cas": "Mini-cas",
 }
 
 UriResolver = Callable[..., str]
@@ -831,7 +832,7 @@ def md_to_html(
         },
         output_format="html5",
     )
-    # base_dir = dossier du markdown (ateliers/) pour résoudre les images relatives
+    # base_dir = dossier du markdown (qcm/, mini-cas/) pour résoudre les images relatives
     # On passe IMAGES_DIR via les chemins relatifs du md
     body = embed_local_images(body, ROOT, mode="web" if for_web else "data")
     body = wrap_keep_together_blocks(body)
@@ -1173,20 +1174,20 @@ def convert_all(*, make_pdf: bool = True, make_html: bool = True) -> None:
     manifest_items: list[dict] = []
 
     if make_pdf and not md_files:
-        print("Aucun fichier .md trouvé dans ateliers/ pour les PDF")
+        print("Aucun fichier .md trouvé dans qcm/ ou mini-cas/ pour les PDF")
     if make_html and not md_files and not course_files:
         print("Aucun Markdown à publier en HTML")
         return
 
     if make_pdf:
-        print(f"→ Conversion PDF de {len(md_files)} fichier(s) (ateliers/)")
+        print(f"→ Conversion PDF de {len(md_files)} fichier(s) (qcm/ + mini-cas/)")
         print(f"  Sortie  : {PDF_DIR}")
         print(f"  Moteur  : {chrome.name if chrome else '—'}")
         print()
 
     if make_html:
         total_html = len(md_files) + len(course_files)
-        print(f"→ Génération HTML de {total_html} page(s) (cours/ + ateliers/)")
+        print(f"→ Génération HTML de {total_html} page(s) (cours/ + qcm/ + mini-cas/)")
         print(f"  Sortie  : {WEB_PAGES}")
         print()
 
@@ -1202,7 +1203,7 @@ def convert_all(*, make_pdf: bool = True, make_html: bool = True) -> None:
                 else title
             )
             origin = md_path.parent.name
-            category = origin if origin in CATEGORY_LABELS else "ateliers"
+            category = origin if origin in CATEGORY_LABELS else "qcm"
 
             if make_html:
                 item = write_web_document(
