@@ -10,9 +10,11 @@
 
 **Membres du groupe :**
 - BADET Mael
+- LEBLOND Tristan
+- LOURENCO Quentin
 - MASIA Antoine
 
-**Format de dépôt attendu :** `STRATEGIE_SI_BADET_MASIA_MINI_CAS_1_G1.pdf`
+**Format de dépôt attendu :** `STRATEGIE_SI_BADET_LEBLOND_LOURENCO_MASIA_MINI_CAS_1_G1.pdf`
 
 ---
 

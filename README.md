@@ -34,7 +34,7 @@ NOM_DU_COURS_NOM1_NOM2_MINI_CAS_1_G1.pdf
 **Exemple :**
 
 ```text
-STRATEGIE_SI_BADET_MASIA_MINI_CAS_1_G1.pdf
+STRATEGIE_SI_BADET_LEBLOND_LOURENCO_MASIA_MINI_CAS_1_G1.pdf
 ```
 
 > Inclure **tous les noms de famille** des membres du groupe, **par ordre alphabétique**.  

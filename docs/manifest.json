@@ -34,9 +34,9 @@
       "label": "Mini-cas",
       "items": [
         {
-          "id": "STRATEGIE_SI_BADET_MASIA_MINI_CAS_1_G1",
+          "id": "STRATEGIE_SI_BADET_LEBLOND_LOURENCO_MASIA_MINI_CAS_1_G1",
           "title": "MINI CAS 1",
-          "path": "pages/mini-cas/STRATEGIE_SI_BADET_MASIA_MINI_CAS_1_G1.html"
+          "path": "pages/mini-cas/STRATEGIE_SI_BADET_LEBLOND_LOURENCO_MASIA_MINI_CAS_1_G1.html"
         }
       ]
     }
