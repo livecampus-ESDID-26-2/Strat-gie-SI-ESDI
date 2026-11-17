@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MINI CAS 3 — Stratégie SI</title>
+  <link rel="stylesheet" href="../../assets/doc.css" />
+  <link rel="stylesheet" href="../../assets/doc-web.css" />
+</head>
+<body class="qcm-doc web-doc">
+<div class="doc-wrap">
+<p class="web-back"><a href="../../index.html" target="_top">← Retour à la bibliothèque</a></p>
+
+<section class="cover-page">
+  <div class="cover-page__top">
+    <img class="cover-page__logo" src="../../assets/images/logo-livecampus.png" alt="Livecampus" />
+    <p class="cover-page__school">Livecampus</p>
+    <h1 class="cover-page__title">Stratégie SI</h1>
+    <p class="cover-page__livrable">MINI CAS 3</p>
+  </div>
+
+  <div class="cover-page__details">
+    <div><span>École</span><strong>Livecampus</strong></div><div><span>Cours</span><strong>Stratégie SI</strong></div><div><span>Professeur</span><strong>À compléter</strong></div><div><span>Livrable</span><strong>MINI CAS 3</strong></div><div><span>Groupe</span><strong>G1</strong></div><div><span>Chapitres</span><strong>3</strong></div>
+  </div>
+
+  <div class="cover-page__members">
+    <p class="cover-page__members-label">Membres du groupe</p>
+    <div class="cover-page__gallery">
+      
+            <article class="cover-card">
+              <img src="../../assets/images/mael_badet.png" alt="BADET Mael" />
+              <p class="cover-card__name">BADET Mael</p>
+            </article>
+            
+            <article class="cover-card">
+              <img src="../../assets/images/tristan_leblond.png" alt="LEBLOND Tristan" />
+              <p class="cover-card__name">LEBLOND Tristan</p>
+            </article>
+            
+            <article class="cover-card">
+              <img src="../../assets/images/quentin_lourenco.png" alt="LOURENCO Quentin" />
+              <p class="cover-card__name">LOURENCO Quentin</p>
+            </article>
+            
+            <article class="cover-card">
+              <img src="../../assets/images/antoine_masia.png" alt="MASIA Antoine" />
+              <p class="cover-card__name">MASIA Antoine</p>
+            </article>
+            
+    </div>
+  </div>
+</section>
+
+
+<section class="sommaire-page">
+  <h2 class="sommaire__title">Sommaire</h2>
+  <ol class="sommaire__list">
+    
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#enonce-du-mini-cas">
+                <span class="sommaire__label">ÉNONCÉ DU MINI-CAS</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#contexte">
+                <span class="sommaire__label">Contexte</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#taches">
+                <span class="sommaire__label">Tâches</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#livrable-attendu">
+                <span class="sommaire__label">Livrable attendu</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#vue-d-ensemble-de-la-feuille-de-route">
+                <span class="sommaire__label">VUE D&#x27;ENSEMBLE DE LA FEUILLE DE ROUTE</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#1-evaluation-du-si-actuel">
+                <span class="sommaire__label">1. ÉVALUATION DU SI ACTUEL</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#1-1-principales-fonctionnalites-du-monolithe">
+                <span class="sommaire__label">1.1 Principales fonctionnalités du monolithe</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#1-2-points-de-faiblesse-et-goulots-d-etranglement">
+                <span class="sommaire__label">1.2 Points de faiblesse et goulots d&#x27;étranglement</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#1-3-livrables-de-la-phase-d-evaluation">
+                <span class="sommaire__label">1.3 Livrables de la phase d&#x27;évaluation</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#2-definition-des-micro-services">
+                <span class="sommaire__label">2. DÉFINITION DES MICRO-SERVICES</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#2-1-services-prioritaires-ordre-recommande">
+                <span class="sommaire__label">2.1 Services prioritaires (ordre recommandé)</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#2-2-interfaces-d-interaction-entre-services">
+                <span class="sommaire__label">2.2 Interfaces d&#x27;interaction entre services</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#3-plan-de-mise-en-uvre">
+                <span class="sommaire__label">3. PLAN DE MISE EN ŒUVRE</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#3-1-calendrier-indicatif-6-mois">
+                <span class="sommaire__label">3.1 Calendrier indicatif (6 mois)</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#3-2-strategie-de-deploiement">
+                <span class="sommaire__label">3.2 Stratégie de déploiement</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#3-3-plan-de-tests">
+                <span class="sommaire__label">3.3 Plan de tests</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#4-migration-des-donnees">
+                <span class="sommaire__label">4. MIGRATION DES DONNÉES</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#4-1-principes">
+                <span class="sommaire__label">4.1 Principes</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#4-2-etapes-par-domaine">
+                <span class="sommaire__label">4.2 Étapes par domaine</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#4-3-points-d-attention">
+                <span class="sommaire__label">4.3 Points d&#x27;attention</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#5-formation-et-documentation">
+                <span class="sommaire__label">5. FORMATION ET DOCUMENTATION</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#5-1-formation-des-equipes-techniques">
+                <span class="sommaire__label">5.1 Formation des équipes techniques</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#5-2-documentation-a-produire">
+                <span class="sommaire__label">5.2 Documentation à produire</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#synthese-et-benefices-attendus">
+                <span class="sommaire__label">SYNTHÈSE ET BÉNÉFICES ATTENDUS</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+  </ol>
+</section>
+
+<h2 id="enonce-du-mini-cas">Énoncé du mini-cas</h2>
+<h3 id="contexte">Contexte</h3>
+<p>Une société de e-commerce doit faire face à une augmentation rapide de son volume de transactions. Le système d&rsquo;information (SI) actuel, basé sur une architecture monolithique, n&rsquo;est pas assez flexible pour s&rsquo;adapter à cette croissance. L&rsquo;entreprise souhaite donc migrer vers une architecture micro-services.</p>
+<h3 id="taches">Tâches</h3>
+<p>Proposer une feuille de route pour migrer le SI vers une architecture micro-services, incluant :</p>
+<ul>
+<li>l&rsquo;évaluation du SI actuel ;</li>
+<li>la définition des micro-services ;</li>
+<li>le plan de mise en œuvre ;</li>
+<li>la migration des données ;</li>
+<li>la formation et la documentation.</li>
+</ul>
+<h3 id="livrable-attendu">Livrable attendu</h3>
+<p>Un document PDF d&rsquo;aspect professionnel comprenant :</p>
+<ul>
+<li>une page de garde (école, cours, professeur, membres du groupe) ;</li>
+<li>une page reprenant l&rsquo;énoncé du mini-cas ;</li>
+<li>des pages numérotées avec une présentation claire ;</li>
+<li>des schémas ou illustrations pour appuyer l&rsquo;analyse.</li>
+</ul>
+<hr>
+<h2 id="vue-d-ensemble-de-la-feuille-de-route">Vue d&rsquo;ensemble de la feuille de route</h2>
+<p><img class="doc-schema" alt="Feuille de route migration micro-services" src="../../assets/images/schema-feuille-route-microservices.png"></p>
+<p>Nous recommandons une migration <strong>incrémentale</strong> (approche <em>strangler fig</em>) plutôt qu&rsquo;un « big bang » : on extrait progressivement des domaines du monolithe, on les expose via des <strong>API</strong>, on bascule le trafic, puis on retire l&rsquo;ancien code. Cette stratégie limite les risques, préserve la continuité du e-commerce et permet d&rsquo;apprendre à chaque itération.</p>
+<hr>
+<h2 id="1-evaluation-du-si-actuel">1. Évaluation du SI actuel</h2>
+<div class="keep-together"><h3 id="1-1-principales-fonctionnalites-du-monolithe">1.1 Principales fonctionnalités du monolithe</h3>
+<table>
+<thead>
+<tr>
+<th>Domaine</th>
+<th>Fonctionnalités typiques</th>
+<th>Criticité business</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Utilisateurs / comptes</strong></td>
+<td>Inscription, authentification, profils, préférences</td>
+<td>Critique</td>
+</tr>
+<tr>
+<td><strong>Catalogue</strong></td>
+<td>Produits, stocks affichés, catégories, recherche</td>
+<td>Critique</td>
+</tr>
+<tr>
+<td><strong>Commandes</strong></td>
+<td>Panier, validation, suivi de commande</td>
+<td>Critique</td>
+</tr>
+<tr>
+<td><strong>Paiement</strong></td>
+<td>Autorisation, capture, remboursements</td>
+<td>Critique</td>
+</tr>
+<tr>
+<td><strong>Livraison</strong></td>
+<td>Transporteurs, tracking, créneaux</td>
+<td>Élevée</td>
+</tr>
+<tr>
+<td><strong>Marketing / promotions</strong></td>
+<td>Codes promo, recommandations, newsletters</td>
+<td>Moyenne</td>
+</tr>
+<tr>
+<td><strong>Notifications</strong></td>
+<td>E-mails, SMS, push</td>
+<td>Élevée</td>
+</tr>
+<tr>
+<td><strong>Reporting / BI</strong></td>
+<td>Tableaux de bord, exports</td>
+<td>Moyenne</td>
+</tr>
+</tbody>
+</table>
+</div><div class="question-break" aria-hidden="true"></div><h3 id="1-2-points-de-faiblesse-et-goulots-d-etranglement">1.2 Points de faiblesse et goulots d&rsquo;étranglement</h3>
+<ol>
+<li><strong>Scalabilité globale contrainte</strong> : pour absorber le pic de transactions, il faut scaler tout le monolithe, même les modules peu sollicités → coûts et complexité inutiles.</li>
+<li><strong>Déploiements risqués</strong> : une modification (ex. catalogue) impose de redéployer l&rsquo;ensemble ; un bug peut impacter commandes et paiement.</li>
+<li><strong>Couplage fort</strong> : bases et modules partagés créent des dépendances cachées et freinent les évolutions parallèles des équipes.</li>
+<li><strong>Goulots techniques probables</strong> :
+   - base de données unique saturée aux heures de pointe ;
+   - file d&rsquo;attente / traitement synchrone des commandes et paiements ;
+   - recherche catalogue et gestion des stocks dans le même processus applicatif ;
+   - montée en charge difficile du front et du back liés.</li>
+<li><strong>Résilience faible</strong> : la panne d&rsquo;un module peut entraîner l&rsquo;indisponibilité de tout le site.</li>
+</ol>
+<div class="question-break" aria-hidden="true"></div><h3 id="1-3-livrables-de-la-phase-d-evaluation">1.3 Livrables de la phase d&rsquo;évaluation</h3>
+<ul>
+<li>Cartographie applicative et flux (C4 / diagrammes de séquence des parcours critiques : achat, paiement, suivi).</li>
+<li>Mesure des performances actuelles (latence, throughput, erreurs) sur les parcours « panier → paiement → confirmation ».</li>
+<li>Matrice des dépendances données / modules.</li>
+<li>Score de risque par domaine (complexité × criticité × volume).</li>
+</ul>
+<hr>
+<h2 id="2-definition-des-micro-services">2. Définition des micro-services</h2>
+<div class="question-break" aria-hidden="true"></div><div class="keep-together"><h3 id="2-1-services-prioritaires-ordre-recommande">2.1 Services prioritaires (ordre recommandé)</h3>
+<p>On extrait d&rsquo;abord les domaines <strong>stables, bien bornés et à fort trafic</strong>, pour démontrer de la valeur rapidement.</p>
+<table>
+<thead>
+<tr>
+<th>Priorité</th>
+<th>Micro-service</th>
+<th>Responsabilité</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1</strong></td>
+<td><code>user-service</code></td>
+<td>Comptes, auth, profils</td>
+<td>Socle transverse, faible couplage métier</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td><code>catalog-service</code></td>
+<td>Produits, catégories, recherche</td>
+<td>Fort volume lecture, scalable indépendamment</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td><code>order-service</code></td>
+<td>Panier, commandes, états</td>
+<td>Cœur métier e-commerce</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td><code>payment-service</code></td>
+<td>Paiements, remboursements</td>
+<td>Isolation sécurité / conformité</td>
+</tr>
+<tr>
+<td><strong>P3</strong></td>
+<td><code>inventory-service</code></td>
+<td>Stocks temps réel</td>
+<td>Réduit les surventes sous charge</td>
+</tr>
+<tr>
+<td><strong>P3</strong></td>
+<td><code>shipping-service</code></td>
+<td>Expédition, tracking</td>
+<td>Intégrations transporteurs</td>
+</tr>
+<tr>
+<td><strong>P4</strong></td>
+<td><code>notification-service</code></td>
+<td>E-mails / SMS / push</td>
+<td>Asynchrone, découplé</td>
+</tr>
+<tr>
+<td><strong>P4</strong></td>
+<td><code>promo-service</code></td>
+<td>Promotions, coupons</td>
+<td>Évolutions marketing fréquentes</td>
+</tr>
+</tbody>
+</table>
+</div><div class="question-break" aria-hidden="true"></div><div class="keep-together"><h3 id="2-2-interfaces-d-interaction-entre-services">2.2 Interfaces d&rsquo;interaction entre services</h3>
+<p><strong>Principes :</strong></p>
+<ul>
+<li>Communication <strong>synchrone</strong> via <strong>API REST</strong> (ou GraphQL pour le BFF front) pour les lectures et actions temps réel.</li>
+<li>Communication <strong>asynchrone</strong> via <strong>bus d&rsquo;événements</strong> (ex. Kafka / RabbitMQ) pour les effets de bord : <code>OrderCreated</code>, <code>PaymentConfirmed</code>, <code>StockReserved</code>, <code>ShipmentDispatched</code>.</li>
+<li>Contrat d&rsquo;API versionné (<code>/v1/...</code>), authentification via <strong>OAuth2 / JWT</strong>, observabilité (logs, traces, métriques).</li>
+</ul>
+<p><strong>Exemples d&rsquo;interfaces :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Producteur</th>
+<th>Consommateur</th>
+<th>Interface</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front / BFF</td>
+<td><code>user-service</code></td>
+<td><code>POST /v1/auth/login</code>, <code>GET /v1/users/{id}</code></td>
+<td>REST</td>
+</tr>
+<tr>
+<td>Front / BFF</td>
+<td><code>catalog-service</code></td>
+<td><code>GET /v1/products</code>, <code>GET /v1/products/{id}</code></td>
+<td>REST</td>
+</tr>
+<tr>
+<td>Front / BFF</td>
+<td><code>order-service</code></td>
+<td><code>POST /v1/orders</code>, <code>GET /v1/orders/{id}</code></td>
+<td>REST</td>
+</tr>
+<tr>
+<td><code>order-service</code></td>
+<td><code>payment-service</code></td>
+<td><code>POST /v1/payments</code></td>
+<td>REST</td>
+</tr>
+<tr>
+<td><code>order-service</code></td>
+<td><code>inventory-service</code></td>
+<td>événement <code>StockReservationRequested</code></td>
+<td>Async</td>
+</tr>
+<tr>
+<td><code>payment-service</code></td>
+<td><code>order-service</code></td>
+<td>événement <code>PaymentConfirmed</code> / <code>PaymentFailed</code></td>
+<td>Async</td>
+</tr>
+<tr>
+<td><code>order-service</code></td>
+<td><code>notification-service</code></td>
+<td>événement <code>OrderConfirmed</code></td>
+<td>Async</td>
+</tr>
+<tr>
+<td><code>shipping-service</code></td>
+<td><code>order-service</code></td>
+<td>événement <code>ShipmentUpdated</code></td>
+<td>Async</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Règle d&rsquo;or :</strong> chaque micro-service possède sa <strong>propre base de données</strong> (database-per-service). Les échanges de données se font par API ou événements, jamais par jointure SQL transversale.</p>
+<hr>
+</div><h2 id="3-plan-de-mise-en-uvre">3. Plan de mise en œuvre</h2>
+<div class="question-break" aria-hidden="true"></div><div class="keep-together"><h3 id="3-1-calendrier-indicatif-6-mois">3.1 Calendrier indicatif (6 mois)</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Période</th>
+<th>Objectifs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0. Cadrage</strong></td>
+<td>Semaines 1–2</td>
+<td>Évaluation, backlog, choix techniques (API gateway, bus, CI/CD, observabilité)</td>
+</tr>
+<tr>
+<td><strong>1. Fondation</strong></td>
+<td>Semaines 3–6</td>
+<td>API Gateway, authentification, environnements, pipeline CI/CD, monitoring</td>
+</tr>
+<tr>
+<td><strong>2. Vague P1</strong></td>
+<td>Semaines 7–12</td>
+<td><code>user-service</code> + <code>catalog-service</code> en production (trafic progressif)</td>
+</tr>
+<tr>
+<td><strong>3. Vague P2</strong></td>
+<td>Semaines 13–18</td>
+<td><code>order-service</code> + <code>payment-service</code> ; bascule du parcours d&rsquo;achat</td>
+</tr>
+<tr>
+<td><strong>4. Vague P3–P4</strong></td>
+<td>Semaines 19–22</td>
+<td>Stocks, livraison, notifications, promotions</td>
+</tr>
+<tr>
+<td><strong>5. Décommission</strong></td>
+<td>Semaines 23–26</td>
+<td>Retrait progressif du monolithe, optimisation, run</td>
+</tr>
+</tbody>
+</table>
+</div><div class="question-break" aria-hidden="true"></div><h3 id="3-2-strategie-de-deploiement">3.2 Stratégie de déploiement</h3>
+<ol>
+<li>Mettre en place un <strong>API Gateway</strong> devant le monolithe et les nouveaux services.</li>
+<li>Router progressivement le trafic (canary / feature flags) vers chaque micro-service.</li>
+<li>Conserver le monolithe comme « shell » tant que des domaines n&rsquo;ont pas été extraits.</li>
+<li>Automatiser les déploiements (CI/CD) avec rollback rapide.</li>
+</ol>
+<div class="question-break" aria-hidden="true"></div><div class="keep-together"><h3 id="3-3-plan-de-tests">3.3 Plan de tests</h3>
+<table>
+<thead>
+<tr>
+<th>Type de test</th>
+<th>Objectif</th>
+<th>Quand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unitaires</strong></td>
+<td>Logique métier de chaque service</td>
+<td>À chaque commit</td>
+</tr>
+<tr>
+<td><strong>Contrats d&rsquo;API</strong></td>
+<td>Compatibilité producteur / consommateur</td>
+<td>Avant merge</td>
+</tr>
+<tr>
+<td><strong>Intégration</strong></td>
+<td>Parcours multi-services (commande → paiement → stock)</td>
+<td>À chaque release candidate</td>
+</tr>
+<tr>
+<td><strong>Performance / charge</strong></td>
+<td>Tenir le pic de transactions e-commerce</td>
+<td>Avant bascule de trafic</td>
+</tr>
+<tr>
+<td><strong>Chaos / résilience</strong></td>
+<td>Vérifier qu&rsquo;une panne locale n&rsquo;arrête pas tout le SI</td>
+<td>Avant go-live majeur</td>
+</tr>
+<tr>
+<td><strong>E2E métier</strong></td>
+<td>Parcours client complet (navigation → paiement → confirmation)</td>
+<td>Avant chaque vague</td>
+</tr>
+</tbody>
+</table>
+<p>Critères de go-live d&rsquo;une vague : SLO respectés (latence, erreur), tests verts, runbook validé, rollback testé.</p>
+<hr>
+</div><h2 id="4-migration-des-donnees">4. Migration des données</h2>
+<div class="question-break" aria-hidden="true"></div><h3 id="4-1-principes">4.1 Principes</h3>
+<ul>
+<li>Garantir l&rsquo;<strong>intégrité</strong> (pas de perte, pas de corruption) et la <strong>cohérence métier</strong> pendant la coexistence monolithe / micro-services.</li>
+<li>Migrer <strong>domaine par domaine</strong>, pas toute la base d&rsquo;un coup.</li>
+<li>Prévoir une période de <strong>double écriture</strong> ou de <strong>réplication</strong> contrôlée, puis bascule en lecture seule côté monolithe.</li>
+</ul>
+<div class="question-break" aria-hidden="true"></div><h3 id="4-2-etapes-par-domaine">4.2 Étapes par domaine</h3>
+<ol>
+<li><strong>Inventaire</strong> des tables / champs du monolithe liés au domaine (ex. commandes).</li>
+<li><strong>Modèle cible</strong> du micro-service (schéma dédié, éventuellement dénormalisé).</li>
+<li><strong>Scripts ETL / CDC</strong> (Extract Transform Load / Change Data Capture) pour synchroniser monolithe → nouvelle base.</li>
+<li><strong>Contrôles d&rsquo;intégrité</strong> : comptes d&rsquo;enregistrements, checksums, échantillons métier, rapprochements financiers pour le paiement.</li>
+<li><strong>Bascule</strong> : lectures sur le nouveau service, puis écritures, puis arrêt de la synchro.</li>
+<li><strong>Archivage</strong> des données historiques selon politique de conservation.</li>
+</ol>
+<div class="question-break" aria-hidden="true"></div><h3 id="4-3-points-d-attention">4.3 Points d&rsquo;attention</h3>
+<ul>
+<li>Identifiants : stratégie d&rsquo;<strong>ID stables</strong> (UUID) pour éviter les collisions entre services.</li>
+<li>Transactions distribuées : préférer la <strong>saga</strong> / cohérence éventuelle plutôt que le 2PC.</li>
+<li>Données personnelles : migration conforme <strong>RGPD</strong> (minimisation, chiffrement, droits d&rsquo;accès).</li>
+<li>Rollback : possibilité de revenir au monolithe tant que la double écriture est active.</li>
+</ul>
+<hr>
+<h2 id="5-formation-et-documentation">5. Formation et documentation</h2>
+<div class="question-break" aria-hidden="true"></div><div class="keep-together"><h3 id="5-1-formation-des-equipes-techniques">5.1 Formation des équipes techniques</h3>
+<table>
+<thead>
+<tr>
+<th>Public</th>
+<th>Contenu</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Développeurs</td>
+<td>Design micro-services, API REST/événements, database-per-service</td>
+<td>Ateliers + labs</td>
+</tr>
+<tr>
+<td>Ops / SRE</td>
+<td>Conteneurs, orchestration, observabilité, incident response</td>
+<td>Workshops</td>
+</tr>
+<tr>
+<td>QA</td>
+<td>Tests de contrats, charge, scénarios E2E</td>
+<td>Sessions pratiques</td>
+</tr>
+<tr>
+<td>Produit / métier</td>
+<td>Impacts parcours client, feature flags, priorisation des vagues</td>
+<td>Briefings</td>
+</tr>
+</tbody>
+</table>
+</div><div class="question-break" aria-hidden="true"></div><h3 id="5-2-documentation-a-produire">5.2 Documentation à produire</h3>
+<ul>
+<li>Architecture cible (C4, diagrammes de séquence des parcours critiques).</li>
+<li>Catalogue des micro-services et <strong>contrats d&rsquo;API</strong> (OpenAPI / AsyncAPI).</li>
+<li>Runbooks d&rsquo;exploitation (déploiement, rollback, incidents).</li>
+<li>Guide de contribution (standards de code, CI/CD, sécurité).</li>
+<li>ADR (Architecture Decision Records) pour les choix structurants.</li>
+</ul>
+<hr>
+<h2 id="synthese-et-benefices-attendus">Synthèse et bénéfices attendus</h2>
+<table>
+<thead>
+<tr>
+<th>Levier (cours ch. 3)</th>
+<th>Application dans cette feuille de route</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Évolutivité</strong></td>
+<td>Scaler indépendamment catalogue, commandes, paiement selon le trafic</td>
+</tr>
+<tr>
+<td><strong>Résilience</strong></td>
+<td>Isolation des pannes (ex. promo down ≠ site down)</td>
+</tr>
+<tr>
+<td><strong>Flexibilité technologique</strong></td>
+<td>Stack adaptée par service (search, paiement, notifications)</td>
+</tr>
+<tr>
+<td><strong>API</strong></td>
+<td>Contrats standardisés + gateway pour intégrer front et partenaires</td>
+</tr>
+<tr>
+<td><strong>Maintenance</strong></td>
+<td>Déploiements ciblés, équipes autonomes par domaine</td>
+</tr>
+</tbody>
+</table>
+<p>En conclusion, la migration vers les micro-services répond directement au problème du monolithe saturé : elle permet d&rsquo;absorber la croissance des transactions e-commerce tout en réduisant les risques de déploiement et en améliorant la résilience. La réussite repose moins sur la technologie seule que sur une <strong>feuille de route progressive</strong>, des <strong>contrats d&rsquo;API clairs</strong>, une <strong>migration de données maîtrisée</strong> et la <strong>montée en compétences</strong> des équipes.</p>
+<footer class="doc-footer">
+  <span>Livecampus — Stratégie SI</span>
+  <span>Groupe G1 — MINI CAS 3</span>
+</footer>
+</div>
+</body>
+</html>
