@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapitre 3 – Les principes d&#x27;évolutivité du SI : SOA, API, Micro-services — Stratégie SI</title>
+  <link rel="stylesheet" href="../../assets/doc.css" />
+  <link rel="stylesheet" href="../../assets/doc-web.css" />
+</head>
+<body class="qcm-doc web-doc">
+<div class="doc-wrap">
+<p class="web-back"><a href="../../index.html" target="_top">← Retour à la bibliothèque</a></p>
+
+<header class="doc-header">
+  <div class="doc-header__brand">
+    <img class="doc-header__logo" src="../../assets/images/logo-livecampus.png" alt="Livecampus" />
+    <div class="doc-header__meta">
+      <p class="school">Livecampus</p>
+      <p class="doc-title">Stratégie SI</p>
+      <p class="doc-sub">Chapitre 3 – Les principes d&#x27;évolutivité du SI : SOA, API, Micro-services</p>
+    </div>
+  </div>
+</header>
+
+
+<h2>Chapitre 3 – Les principes d&rsquo;évolutivité du SI : SOA, API, Micro-services</h2>
+<h3>Objectifs</h3>
+<ul>
+<li>Comprendre l&rsquo;importance de l&rsquo;évolutivité pour maintenir un système d&rsquo;information performant.</li>
+<li>Explorer les principales architectures facilitant l&rsquo;évolutivité : SOA, API et Micro-services.</li>
+<li>Savoir comment intégrer ces concepts dans une stratégie SI pour répondre aux défis futurs.</li>
+</ul>
+<h3>En résumé</h3>
+<p>L&rsquo;évolutivité d&rsquo;un système d&rsquo;information (SI) consiste à anticiper la croissance des besoins d&rsquo;une organisation.</p>
+<h3>A – SOA (Service-Oriented Architecture)</h3>
+<div class="keep-together"><h4>Définition</h4>
+<p>La SOA (Service-Oriented Architecture) est une architecture logicielle modulaire qui organise les fonctionnalités d&rsquo;un système d&rsquo;information (SI) en plusieurs services indépendants et autonomes.</p>
+<p>Chaque service représente une unité fonctionnelle distincte, telle que la gestion des commandes, la facturation, l&rsquo;authentification des utilisateurs ou la gestion des stocks.</p>
+</div><div class="keep-together"><h4>Caractéristiques clés</h4>
+<ul>
+<li><strong>Services indépendants :</strong> les services sont autonomes.</li>
+<li><strong>Communication via des interfaces standardisées :</strong> les services interagissent entre eux en utilisant des API (Application Programming Interface) ou d&rsquo;autres mécanismes de communication standardisés comme SOAP ou REST.</li>
+<li><strong>Réutilisation des services :</strong> un service peut être réutilisé par plusieurs applications, ce qui favorise l&rsquo;efficacité et réduit la redondance.</li>
+</ul>
+</div><div class="keep-together"><h4>Avantages</h4>
+<ul>
+<li><strong>Flexibilité :</strong> la SOA favorise l&rsquo;agilité des systèmes d&rsquo;information en permettant l&rsquo;ajout ou la suppression de services sans affecter le fonctionnement global du SI.</li>
+<li><strong>Facilite la maintenance :</strong> chaque service étant indépendant, il peut être mis à jour ou corrigé sans que cela impacte les autres services.</li>
+<li><strong>Interopérabilité :</strong> la SOA facilite l&rsquo;interaction entre des systèmes hétérogènes, développés dans des langages différents ou hébergés sur des plateformes différentes.</li>
+</ul>
+</div><div class="keep-together"><h4>Étude de cas SOA : Netflix</h4>
+<p>Netflix utilise une architecture SOA pour gérer efficacement son service de diffusion de contenu à grande échelle.</p>
+<ul>
+<li>Gestion des comptes</li>
+<li>Recommandations de contenu</li>
+<li>Streaming vidéo</li>
+</ul>
+<p>Grâce à cette architecture SOA, Netflix peut évoluer rapidement, introduire de nouvelles fonctionnalités sans affecter la disponibilité générale du service.</p>
+</div><h3>B – API (Application Programming Interface)</h3>
+<div class="keep-together"><h4>Définition</h4>
+<p>Les API sont des interfaces qui permettent à différentes applications ou systèmes de communiquer entre eux. Elles définissent un ensemble de règles pour les requêtes et les réponses, permettant à un logiciel d&rsquo;accéder à un autre, ou d&rsquo;utiliser des fonctionnalités externes.</p>
+<p>Par exemple, une application peut utiliser une API pour accéder à une base de données distante, ou pour interagir avec un service de paiement.</p>
+</div><div class="keep-together"><h4>Caractéristiques clés</h4>
+<ul>
+<li><strong>Interface standardisée :</strong> les API sont normalisées, ce qui permet aux développeurs de les utiliser facilement.</li>
+<li><strong>Types d&rsquo;API :</strong> les API REST (basées sur HTTP) sont les plus courantes, mais il existe aussi des API SOAP (basées sur XML) et des API GraphQL, qui permettent des requêtes plus flexibles.</li>
+<li><strong>Sécurité :</strong> les API incluent souvent des mécanismes de sécurité comme l&rsquo;authentification via des clés API, des jetons OAuth, ou d&rsquo;autres méthodes pour assurer que seules les parties autorisées accèdent aux données.</li>
+</ul>
+</div><div class="keep-together"><h4>Avantages</h4>
+<ul>
+<li><strong>Connectivité :</strong> les API facilitent l&rsquo;intégration des services externes (comme les solutions de paiement ou de gestion de la relation client) avec les systèmes internes.</li>
+<li><strong>Évolutivité :</strong> une API bien conçue permet d&rsquo;ajouter des fonctionnalités ou de mettre à jour les services sans interrompre les autres processus du système.</li>
+<li><strong>Automatisation :</strong> grâce aux API, les entreprises peuvent automatiser de nombreux processus.</li>
+</ul>
+</div><div class="keep-together"><h4>Étude de cas API : Facebook</h4>
+<p>Facebook utilise une API qui permet aux développeurs d&rsquo;intégrer des fonctionnalités de la plateforme dans d&rsquo;autres applications.</p>
+<p>Principales fonctionnalités de l&rsquo;API Facebook :</p>
+<ul>
+<li>Connexion via Facebook</li>
+<li>Partage de contenu</li>
+<li>Accès aux données des utilisateurs</li>
+</ul>
+</div><h3>C – Micro-services</h3>
+<div class="keep-together"><h4>Définition</h4>
+<p>L&rsquo;architecture des micro-services divise une application en petits services indépendants, chacun étant responsable d&rsquo;une tâche spécifique.</p>
+<p>Contrairement à une architecture monolithique, où toutes les fonctionnalités sont regroupées dans une seule application, les micro-services sont isolés, autonomes, et peuvent évoluer indépendamment.</p>
+</div><div class="keep-together"><h4>Caractéristiques clés</h4>
+<ul>
+<li><strong>Services indépendants :</strong> chaque micro-service peut être développé, testé et déployé indépendamment des autres, ce qui permet une grande agilité dans le développement et la maintenance.</li>
+<li><strong>Technologies variées :</strong> chaque micro-service peut être écrit dans un langage différent selon ses besoins spécifiques.</li>
+<li><strong>Communication entre micro-services :</strong> les micro-services communiquent entre eux via des API ou des systèmes de messagerie, assurant une interaction fluide sans dépendance forte.</li>
+</ul>
+</div><div class="keep-together"><h4>Avantages</h4>
+<ul>
+<li><strong>Évolutivité :</strong> chaque micro-service peut évoluer indépendamment, ce qui permet d&rsquo;adapter rapidement le SI aux besoins croissants, sans affecter le reste du système.</li>
+<li><strong>Résilience :</strong> si un micro-service tombe en panne, cela n&rsquo;affecte pas l&rsquo;ensemble du système, car les autres services continuent de fonctionner normalement.</li>
+<li><strong>Flexibilité technologique :</strong> cette approche permet d&rsquo;utiliser différentes technologies pour chaque micro-service selon ses besoins spécifiques.</li>
+</ul>
+</div><div class="keep-together"><h4>Étude de cas micro-services : Uber</h4>
+<p>Uber utilise une architecture de micro-services pour garantir la fiabilité et la performance de son application. En tant que plateforme reliant chauffeurs et passagers, Uber doit gérer un volume élevé de données et de transactions en temps réel.</p>
+<p>Organisation des micro-services chez Uber :</p>
+<ul>
+<li>Gestion des trajets</li>
+<li>Facturation et paiement</li>
+<li>Géolocalisation</li>
+</ul>
+<p>En résumé, l&rsquo;architecture micro-services permet à Uber de gérer efficacement des millions de transactions tout en offrant une expérience utilisateur fluide et fiable.</p>
+</div><h3>D – Conclusion</h3>
+<p>L&rsquo;évolutivité du système d&rsquo;information (SI) est un facteur clé pour assurer la pérennité et la compétitivité des entreprises dans un environnement technologique en constante évolution. La capacité d&rsquo;un SI à s&rsquo;adapter aux nouveaux besoins, aux évolutions du marché, ainsi qu&rsquo;aux innovations technologiques est cruciale pour éviter l&rsquo;obsolescence, améliorer les performances, et répondre rapidement aux exigences des clients et des utilisateurs.</p>
+<p>Par ailleurs, ces architectures favorisent une meilleure gestion des risques. En isolant les services, les entreprises limitent l&rsquo;impact des défaillances potentielles à un seul composant du SI, réduisant ainsi les interruptions globales. Cette résilience est particulièrement importante pour assurer la continuité des activités dans des environnements fortement interconnectés. En outre, la capacité à réutiliser les services à travers différents projets et domaines permet d&rsquo;optimiser les ressources, de réduire les coûts de développement, et de faciliter la maintenance.</p>
+<p>En résumé, les architectures SOA, API et microservices ne sont pas seulement des modèles techniques, mais des <strong>leviers stratégiques</strong> pour assurer la durabilité et la compétitivité des systèmes d&rsquo;information à long terme. En mettant en place ces approches, les entreprises s&rsquo;assurent de pouvoir s&rsquo;adapter à des environnements en constante mutation, tout en conservant la flexibilité nécessaire pour innover, évoluer et répondre aux besoins futurs, sans compromettre ni la performance ni la stabilité de leur SI.</p>
+<h3>Question / débat oral</h3>
+<p>Une API fait-elle partie du SOA ?</p>
+<footer class="doc-footer">
+  <span>Livecampus — Stratégie SI</span>
+  <span>Chapitre 3 – Les principes d&#x27;évolutivité du SI : SOA, API, Micro-services</span>
+</footer>
+</div>
+</body>
+</html>

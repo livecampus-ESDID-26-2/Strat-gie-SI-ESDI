@@ -1,6 +1,6 @@
 {
   "title": "Stratégie SI",
-  "generated": "2026-11-16",
+  "generated": "2026-11-17",
   "categories": [
     {
       "id": "cours",
@@ -15,6 +15,16 @@
           "id": "chapitre-1-introduction-a-la-gouvernance-des-donnees",
           "title": "Chapitre 1 – Introduction à la gouvernance des données",
           "path": "pages/cours/chapitre-1-introduction-a-la-gouvernance-des-donnees.html"
+        },
+        {
+          "id": "chapitre-2-les-principales-normes-de-gouvernance-des-donnees",
+          "title": "Chapitre 2 – Les principales normes de gouvernance des données",
+          "path": "pages/cours/chapitre-2-les-principales-normes-de-gouvernance-des-donnees.html"
+        },
+        {
+          "id": "chapitre-3-les-principes-d-evolutivite-du-si-soa-api-micro-services",
+          "title": "Chapitre 3 – Les principes d'évolutivité du SI : SOA, API, Micro-services",
+          "path": "pages/cours/chapitre-3-les-principes-d-evolutivite-du-si-soa-api-micro-services.html"
         }
       ]
     },
@@ -26,6 +36,11 @@
           "id": "STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N1",
           "title": "QUIZ N1",
           "path": "pages/qcm/STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N1.html"
+        },
+        {
+          "id": "STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N2",
+          "title": "QUIZ N2",
+          "path": "pages/qcm/STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N2.html"
         }
       ]
     },
