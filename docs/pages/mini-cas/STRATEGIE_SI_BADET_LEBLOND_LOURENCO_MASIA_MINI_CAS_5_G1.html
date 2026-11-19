@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MINI CAS 5 — Stratégie SI</title>
+  <link rel="stylesheet" href="../../assets/doc.css" />
+  <link rel="stylesheet" href="../../assets/doc-web.css" />
+</head>
+<body class="qcm-doc web-doc">
+<div class="doc-wrap">
+<p class="web-back"><a href="../../index.html" target="_top">← Retour à la bibliothèque</a></p>
+
+<section class="cover-page">
+  <div class="cover-page__top">
+    <img class="cover-page__logo" src="../../assets/images/logo-livecampus.png" alt="Livecampus" />
+    <p class="cover-page__school">Livecampus</p>
+    <h1 class="cover-page__title">Stratégie SI</h1>
+    <p class="cover-page__livrable">MINI CAS 5</p>
+  </div>
+
+  <div class="cover-page__details">
+    <div><span>École</span><strong>Livecampus</strong></div><div><span>Cours</span><strong>Stratégie SI</strong></div><div><span>Professeur</span><strong>À compléter</strong></div><div><span>Livrable</span><strong>MINI CAS 5</strong></div><div><span>Groupe</span><strong>G1</strong></div><div><span>Chapitres</span><strong>5</strong></div>
+  </div>
+
+  <div class="cover-page__members">
+    <p class="cover-page__members-label">Membres du groupe</p>
+    <div class="cover-page__gallery">
+      
+            <article class="cover-card">
+              <img src="../../assets/images/mael_badet.png" alt="BADET Mael" />
+              <p class="cover-card__name">BADET Mael</p>
+            </article>
+            
+            <article class="cover-card">
+              <img src="../../assets/images/tristan_leblond.png" alt="LEBLOND Tristan" />
+              <p class="cover-card__name">LEBLOND Tristan</p>
+            </article>
+            
+            <article class="cover-card">
+              <img src="../../assets/images/quentin_lourenco.png" alt="LOURENCO Quentin" />
+              <p class="cover-card__name">LOURENCO Quentin</p>
+            </article>
+            
+            <article class="cover-card">
+              <img src="../../assets/images/antoine_masia.png" alt="MASIA Antoine" />
+              <p class="cover-card__name">MASIA Antoine</p>
+            </article>
+            
+    </div>
+  </div>
+</section>
+
+
+<section class="sommaire-page">
+  <h2 class="sommaire__title">Sommaire</h2>
+  <ol class="sommaire__list">
+    
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#enonce-du-mini-cas">
+                <span class="sommaire__label">ÉNONCÉ DU MINI-CAS</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#contexte">
+                <span class="sommaire__label">Contexte</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#tache">
+                <span class="sommaire__label">Tâche</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#livrable-attendu">
+                <span class="sommaire__label">Livrable attendu</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#vue-d-ensemble-du-plan">
+                <span class="sommaire__label">VUE D&#x27;ENSEMBLE DU PLAN</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#1-analyse-des-besoins-et-choix-de-l-api">
+                <span class="sommaire__label">1. ANALYSE DES BESOINS ET CHOIX DE L&#x27;API</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#1-1-besoins-de-l-entreprise">
+                <span class="sommaire__label">1.1 Besoins de l&#x27;entreprise</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#1-2-choix-de-la-technologie-api-rest">
+                <span class="sommaire__label">1.2 Choix de la technologie : API REST</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#2-planification-et-preparation-de-l-integration">
+                <span class="sommaire__label">2. PLANIFICATION ET PRÉPARATION DE L&#x27;INTÉGRATION</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#2-1-documentation-de-l-api">
+                <span class="sommaire__label">2.1 Documentation de l&#x27;API</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#2-2-architecture-cible">
+                <span class="sommaire__label">2.2 Architecture cible</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#2-3-calendrier-indicatif">
+                <span class="sommaire__label">2.3 Calendrier indicatif</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#2-4-coffre-fort-de-credentials-web">
+                <span class="sommaire__label">2.4 Coffre-fort de credentials web</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#3-securite-des-donnees-et-des-transactions">
+                <span class="sommaire__label">3. SÉCURITÉ DES DONNÉES ET DES TRANSACTIONS</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#3-1-coffre-fort-et-rotation-des-secrets">
+                <span class="sommaire__label">3.1 Coffre-fort et rotation des secrets</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#4-tests-et-validation">
+                <span class="sommaire__label">4. TESTS ET VALIDATION</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#5-deploiement-et-suivi">
+                <span class="sommaire__label">5. DÉPLOIEMENT ET SUIVI</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#5-1-mise-en-production">
+                <span class="sommaire__label">5.1 Mise en production</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#5-2-surveillance-continue">
+                <span class="sommaire__label">5.2 Surveillance continue</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#6-formation-des-equipes-et-documentation">
+                <span class="sommaire__label">6. FORMATION DES ÉQUIPES ET DOCUMENTATION</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#6-1-formation">
+                <span class="sommaire__label">6.1 Formation</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h3">
+              <a class="sommaire__row" href="#6-2-documentation-technique">
+                <span class="sommaire__label">6.2 Documentation technique</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+            <li class="sommaire__item sommaire__row--h2">
+              <a class="sommaire__row" href="#synthese">
+                <span class="sommaire__label">SYNTHÈSE</span>
+                <span class="sommaire__dots" aria-hidden="true"></span>
+                <span class="sommaire__page">…</span>
+              </a>
+            </li>
+            
+  </ol>
+</section>
+
+<h2 id="enonce-du-mini-cas">Énoncé du mini-cas</h2>
+<h3 id="contexte">Contexte</h3>
+<p>Une entreprise de e-commerce souhaite intégrer une plateforme de paiement en ligne via une API. Cette API permettra aux clients de payer directement sur le site de l&rsquo;entreprise, et il est crucial de garantir la sécurité des transactions tout en assurant une intégration fluide et fiable. L&rsquo;objectif est d&rsquo;offrir une expérience utilisateur optimisée, avec un processus de paiement rapide et sécurisé.</p>
+<h3 id="tache">Tâche</h3>
+<p>En tant que responsable technique, proposer un plan détaillé pour intégrer la plateforme de paiement : étapes clés, technologies à utiliser et mesures de sécurité pour protéger les données sensibles des clients.</p>
+<h3 id="livrable-attendu">Livrable attendu</h3>
+<p>Un document PDF d&rsquo;aspect professionnel comprenant :</p>
+<ul>
+<li>une page de garde (école, cours, professeur, membres du groupe) ;</li>
+<li>une page reprenant l&rsquo;énoncé du mini-cas ;</li>
+<li>des pages numérotées avec une présentation claire ;</li>
+<li>des schémas ou illustrations pour appuyer l&rsquo;analyse.</li>
+</ul>
+<hr>
+<h2 id="vue-d-ensemble-du-plan">Vue d&rsquo;ensemble du plan</h2>
+<p><img class="doc-schema" alt="Plan d'intégration API de paiement" src="../../assets/images/schema-integration-api-paiement.png"></p>
+<p>L&rsquo;intégration s&rsquo;appuie sur les leviers du chapitre 5 : choix d&rsquo;une <strong>API REST</strong>, <strong>sécurisation des échanges</strong> (TLS, OAuth), <strong>tests / validation</strong>, puis <strong>surveillance et maintenance</strong>. Nous évitons de stocker les numéros de carte : le PSP (Payment Service Provider) gère la tokenisation et la conformité PCI-DSS.</p>
+<hr>
+<h2 id="1-analyse-des-besoins-et-choix-de-l-api">1. Analyse des besoins et choix de l&rsquo;API</h2>
+<div class="keep-together"><h3 id="1-1-besoins-de-l-entreprise">1.1 Besoins de l&rsquo;entreprise</h3>
+<table>
+<thead>
+<tr>
+<th>Besoin</th>
+<th>Exigence cible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume de transactions</td>
+<td>Pic Black Friday / soldes : montée en charge sans timeout checkout</td>
+</tr>
+<tr>
+<td>Méthodes de paiement</td>
+<td>CB (Visa/Mastercard), Apple Pay / Google Pay, éventuellement SEPA</td>
+</tr>
+<tr>
+<td>International</td>
+<td>Multi-devises, 3-D Secure (SCA / DSP2) pour l&rsquo;Europe</td>
+</tr>
+<tr>
+<td>UX</td>
+<td>Paiement rapide, peu d&rsquo;étapes, messages d&rsquo;erreur clairs</td>
+</tr>
+<tr>
+<td>Fiabilité</td>
+<td>Webhooks de confirmation, idempotence, reprise sur incident</td>
+</tr>
+<tr>
+<td>Conformité</td>
+<td>RGPD + non-stockage des données CB (réduction de portée PCI)</td>
+</tr>
+</tbody>
+</table>
+</div><div class="question-break" aria-hidden="true"></div><h3 id="1-2-choix-de-la-technologie-api-rest">1.2 Choix de la technologie : API REST</h3>
+<p>Conformément au cours, pour une intégration web moderne nous privilégions une <strong>API REST</strong> (HTTP/JSON) plutôt que SOAP :</p>
+<ul>
+<li>simplicité d&rsquo;intégration avec le front et le backend ;</li>
+<li>bonne interopérabilité et évolutivité ;</li>
+<li>écosystème mature (SDK, webhooks, sandbox).</li>
+</ul>
+<p><strong>SOAP</strong> resterait envisageable uniquement si un partenaire legacy l&rsquo;imposait ; ce n&rsquo;est pas le cas ici.</p>
+<p><strong>Exemple de PSP :</strong> Stripe, Adyen ou équivalent européen selon contraintes métier / coûts.</p>
+<hr>
+<h2 id="2-planification-et-preparation-de-l-integration">2. Planification et préparation de l&rsquo;intégration</h2>
+<div class="question-break" aria-hidden="true"></div><h3 id="2-1-documentation-de-l-api">2.1 Documentation de l&rsquo;API</h3>
+<p>Avant de coder, étudier :</p>
+<ul>
+<li>les <strong>endpoints</strong> (<code>POST /payment_intents</code>, capture, refund, etc.) ;</li>
+<li>les méthodes HTTP (<strong>POST</strong>, <strong>GET</strong>) et formats de payload ;</li>
+<li>l&rsquo;authentification (clés secrètes, OAuth) ;</li>
+<li>les <strong>webhooks</strong> de statut (<code>payment_succeeded</code>, <code>payment_failed</code>) ;</li>
+<li>les codes d&rsquo;erreur et la politique de retry ;</li>
+<li>l&rsquo;environnement <strong>sandbox</strong> pour les tests.</li>
+</ul>
+<div class="question-break" aria-hidden="true"></div><h3 id="2-2-architecture-cible">2.2 Architecture cible</h3>
+<ol>
+<li>Le <strong>front checkout</strong> collecte les infos de paiement via le composant sécurisé du PSP (Elements / Drop-in) → <strong>pas de CB en clair dans notre SI</strong>.</li>
+<li>Le <strong>backend e-commerce</strong> crée l&rsquo;intention de paiement via l&rsquo;API REST (clé secrète côté serveur uniquement).</li>
+<li>Le client authentifie le paiement (3-D Secure si requis).</li>
+<li>Le PSP notifie le backend par <strong>webhook signé</strong>.</li>
+<li>Le backend met à jour la commande (<code>paid</code> / <code>failed</code>) et déclenche confirmation / livraison.</li>
+</ol>
+<div class="question-break" aria-hidden="true"></div><div class="keep-together"><h3 id="2-3-calendrier-indicatif">2.3 Calendrier indicatif</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Durée</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cadrage &amp; choix PSP</td>
+<td>1 semaine</td>
+<td>Besoins, contrat, accès sandbox</td>
+</tr>
+<tr>
+<td>Conception</td>
+<td>1 semaine</td>
+<td>Séquences, modèle de données commande/paiement, menaces</td>
+</tr>
+<tr>
+<td>Coffre-fort credentials web</td>
+<td>3–5 jours</td>
+<td>Provisionner le vault, espaces sandbox/prod, droits d&rsquo;accès</td>
+</tr>
+<tr>
+<td>Développement</td>
+<td>2–3 semaines</td>
+<td>Backend API, checkout, webhooks, idempotence</td>
+</tr>
+<tr>
+<td>Tests</td>
+<td>1–2 semaines</td>
+<td>Intégration, charge, sécurité, parcours E2E</td>
+</tr>
+<tr>
+<td>Mise en production</td>
+<td>1 semaine</td>
+<td>Basculer progressivement, monitoring</td>
+</tr>
+<tr>
+<td>Hypercare</td>
+<td>2 semaines</td>
+<td>Support renforcé, correctifs</td>
+</tr>
+</tbody>
+</table>
+</div><div class="question-break" aria-hidden="true"></div><h3 id="2-4-coffre-fort-de-credentials-web">2.4 Coffre-fort de credentials web</h3>
+<p>Les secrets de l&rsquo;intégration (clé secrète API PSP, secrets de signature webhook, certificats, jetons OAuth) ne doivent <strong>jamais</strong> être stockés en clair dans le code, le dépôt Git ou les fichiers <code>.env</code> versionnés.</p>
+<p>Nous mettons en place un <strong>coffre-fort de credentials web</strong> (ex. HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, ou le secret store du cloud / de l&rsquo;hébergeur) avec :</p>
+<ul>
+<li>des espaces séparés <strong>sandbox</strong> et <strong>production</strong> ;</li>
+<li>un accès par <strong>identité applicative</strong> (service account / rôle IAM), pas par mot de passe partagé ;</li>
+<li>une injection des secrets au runtime (CI/CD + runtime du backend) ;</li>
+<li>une journalisation des accès au vault (qui a lu quel secret, quand).</li>
+</ul>
+<p>Cette étape est planifiée juste après la conception, pour que le développement consomme déjà les secrets via le coffre-fort et non via des fichiers locaux.</p>
+<hr>
+<h2 id="3-securite-des-donnees-et-des-transactions">3. Sécurité des données et des transactions</h2>
+<table>
+<thead>
+<tr>
+<th>Mesure</th>
+<th>Mise en œuvre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chiffrement transit</strong></td>
+<td>TLS 1.2+ / certificats SSL sur tous les échanges</td>
+</tr>
+<tr>
+<td><strong>Authentification API</strong></td>
+<td>Clés secrètes côté serveur, OAuth si proposé ; jamais de clé secrète dans le front</td>
+</tr>
+<tr>
+<td><strong>Coffre-fort &amp; rotation</strong></td>
+<td>Secrets dans un vault ; rotation périodique et après incident</td>
+</tr>
+<tr>
+<td><strong>Tokenization</strong></td>
+<td>Le PSP tokenize la carte ; le SI ne stocke que des références / IDs de paiement</td>
+</tr>
+<tr>
+<td><strong>Webhooks</strong></td>
+<td>Vérification de signature ; rejet si invalide</td>
+</tr>
+<tr>
+<td><strong>Idempotence</strong></td>
+<td>Clés d&rsquo;idempotence pour éviter les doubles débits</td>
+</tr>
+<tr>
+<td><strong>Moindre privilège</strong></td>
+<td>Comptes / rôles séparés (dev, prod, support)</td>
+</tr>
+<tr>
+<td><strong>Journalisation</strong></td>
+<td>Logs sans données sensibles (pas de PAN, pas de CVV)</td>
+</tr>
+<tr>
+<td><strong>Audits</strong></td>
+<td>Revue de sécurité + tests de pénétration avant go-live</td>
+</tr>
+<tr>
+<td><strong>RGPD</strong></td>
+<td>Minimisation, durées de conservation, droits d&rsquo;accès sur les données de transaction non CB</td>
+</tr>
+</tbody>
+</table>
+<div class="question-break" aria-hidden="true"></div><div class="keep-together"><h3 id="3-1-coffre-fort-et-rotation-des-secrets">3.1 Coffre-fort et rotation des secrets</h3>
+<p>Le stockage dans un coffre-fort ne suffit pas : les secrets doivent être <strong>rotatés</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Secret</th>
+<th>Fréquence de rotation</th>
+<th>Déclencheur immédiat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clé secrète API PSP (prod)</td>
+<td>Tous les 90 jours</td>
+<td>Fuite suspectée, départ d&rsquo;un admin, incident</td>
+</tr>
+<tr>
+<td>Secret de signature webhook</td>
+<td>Tous les 90 jours</td>
+<td>Compromise, changement de PSP / endpoint</td>
+</tr>
+<tr>
+<td>Jetons OAuth / refresh</td>
+<td>Selon TTL du fournisseur</td>
+<td>Révocation, anomalie d&rsquo;accès</td>
+</tr>
+<tr>
+<td>Certificats TLS</td>
+<td>Avant expiration (alerte J-30)</td>
+<td>Compromission du certificat</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Processus de rotation :</strong></p>
+<ol>
+<li>Générer la nouvelle clé / secret dans le coffre-fort (version N+1).</li>
+<li>Déployer la double validité si le PSP le permet (ancienne + nouvelle clé pendant une fenêtre courte).</li>
+<li>Mettre à jour les services (backend, workers webhook) pour lire la nouvelle version.</li>
+<li>Vérifier les paiements et webhooks en production.</li>
+<li>Révoquer l&rsquo;ancienne clé et archiver l&rsquo;événement de rotation dans les logs d&rsquo;audit.</li>
+</ol>
+<p>Ainsi, même en cas de fuite limitée dans le temps, la fenêtre d&rsquo;exposition reste courte. La rotation s&rsquo;intègre aussi à la maintenance continue prévue après le go-live.</p>
+<p>Ces mesures reprennent les bonnes pratiques du cours : <strong>sécuriser les échanges</strong>, surveiller les vulnérabilités, et valider les processus critiques avant production.</p>
+<hr>
+</div><h2 id="4-tests-et-validation">4. Tests et validation</h2>
+<table>
+<thead>
+<tr>
+<th>Type de test</th>
+<th>Objectif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sandbox fonctionnel</td>
+<td>Parcours succès / échec / 3DS / remboursement</td>
+</tr>
+<tr>
+<td>Contrats d&rsquo;API</td>
+<td>Compatibilité des payloads et codes retour</td>
+</tr>
+<tr>
+<td>Intégration E2E</td>
+<td>Panier → paiement → confirmation commande</td>
+</tr>
+<tr>
+<td>Charge</td>
+<td>Tenir le volume de transactions attendu</td>
+</tr>
+<tr>
+<td>Sécurité</td>
+<td>Signature webhooks, absence de fuite de secrets, headers sécurisés</td>
+</tr>
+<tr>
+<td>Reprise sur incident</td>
+<td>Comportement si PSP timeout / webhook manquant</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critères de go-live :</strong> taux d&rsquo;erreur sous seuil, parcours critiques validés, runbook incident prêt, rollback possible (feature flag checkout).</p>
+<hr>
+<h2 id="5-deploiement-et-suivi">5. Déploiement et suivi</h2>
+<div class="question-break" aria-hidden="true"></div><h3 id="5-1-mise-en-production">5.1 Mise en production</h3>
+<ul>
+<li>Déployer hors pic d&rsquo;audience.</li>
+<li>Activer le nouveau paiement via <strong>feature flag</strong> (canary : % de trafic progressif).</li>
+<li>Minimiser les interruptions : l&rsquo;ancien moyen de paiement reste disponible jusqu&rsquo;à stabilisation.</li>
+<li>Vérifier les DNS / certificats / variables d&rsquo;environnement de production.</li>
+</ul>
+<div class="question-break" aria-hidden="true"></div><div class="keep-together"><h3 id="5-2-surveillance-continue">5.2 Surveillance continue</h3>
+<ul>
+<li>Monitoring temps réel : taux de succès paiement, latence API, erreurs 4xx/5xx, webhooks en retard.</li>
+<li>Alerting (PagerDuty / e-mail / Slack) sur anomalies et suspicion de fraude.</li>
+<li>Tableaux de bord métier : conversion checkout, paniers abandonnés au paiement.</li>
+<li>Maintenance : mises à jour régulières SDK / API, rotation des clés, revue des accès.</li>
+</ul>
+<p><strong>Exemples de stack de monitoring :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Besoin</th>
+<th>Outils (exemples)</th>
+<th>Usage pour le paiement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Métriques &amp; dashboards</td>
+<td><strong>Prometheus + Grafana</strong></td>
+<td>Latence API PSP, taux de succès / échec, saturation CPU/RAM, files webhooks</td>
+</tr>
+<tr>
+<td>Logs centralisés</td>
+<td><strong>ELK</strong> (Elasticsearch, Logstash/Fluentd, Kibana) ou OpenSearch</td>
+<td>Corréler erreurs checkout, codes retour PSP, traces sans données CB</td>
+</tr>
+<tr>
+<td>Tracing distribué</td>
+<td><strong>Jaeger</strong> / OpenTelemetry</td>
+<td>Suivre une transaction panier → backend → PSP → webhook</td>
+</tr>
+<tr>
+<td>Uptime / synthétique</td>
+<td><strong>Uptime Kuma</strong>, Blackbox Exporter, Pingdom</td>
+<td>Sonde périodique du parcours checkout et des endpoints critiques</td>
+</tr>
+<tr>
+<td>APM applicatif</td>
+<td>Datadog, New Relic, Sentry</td>
+<td>Exceptions backend, performances des appels API</td>
+</tr>
+<tr>
+<td>Alerting</td>
+<td>Alertmanager (Grafana), PagerDuty, Slack</td>
+<td>Seuil d&rsquo;erreurs 5xx, chute du taux d&rsquo;autorisation, webhooks en retard</td>
+</tr>
+</tbody>
+</table>
+<p>En pratique, un socle <strong>Prometheus/Grafana</strong> (métriques) + <strong>ELK</strong> (logs) + alertes Slack/PagerDuty couvre déjà l&rsquo;essentiel pour piloter l&rsquo;intégration en production.</p>
+<hr>
+</div><h2 id="6-formation-des-equipes-et-documentation">6. Formation des équipes et documentation</h2>
+<div class="question-break" aria-hidden="true"></div><h3 id="6-1-formation">6.1 Formation</h3>
+<ul>
+<li><strong>Support / SAV :</strong> lire un statut de paiement, gérer un remboursement, escalader une fraude.</li>
+<li><strong>Ops / DSI :</strong> monitoring, rotation des secrets, procédure d&rsquo;incident PSP.</li>
+<li><strong>Produit / métier :</strong> impacts UX, méthodes de paiement, reporting.</li>
+</ul>
+<div class="question-break" aria-hidden="true"></div><h3 id="6-2-documentation-technique">6.2 Documentation technique</h3>
+<ul>
+<li>Architecture et diagrammes de séquence.</li>
+<li>Contrats d&rsquo;API internes + références aux endpoints PSP.</li>
+<li>Procédures d&rsquo;exploitation (déploiement, rollback, incident).</li>
+<li>Matrice des responsabilités (qui peut rembourser, qui gère les clés).</li>
+</ul>
+<hr>
+<h2 id="synthese">Synthèse</h2>
+<table>
+<thead>
+<tr>
+<th>Étape (guide du mini-cas)</th>
+<th>Notre réponse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analyse des besoins &amp; choix API</td>
+<td>REST + PSP tokenisé, multi-moyens, international / 3DS</td>
+</tr>
+<tr>
+<td>Planification &amp; préparation</td>
+<td>Doc API, architecture, calendrier en phases</td>
+</tr>
+<tr>
+<td>Sécurité</td>
+<td>TLS, OAuth/clés serveur, tokenization, webhooks signés, audits</td>
+</tr>
+<tr>
+<td>Déploiement &amp; suivi</td>
+<td>Canary, monitoring, alerting, maintenance</td>
+</tr>
+<tr>
+<td>Formation &amp; documentation</td>
+<td>Support + ops formés, doc technique complète</td>
+</tr>
+</tbody>
+</table>
+<p>En conclusion, l&rsquo;intégration réussie d&rsquo;une API de paiement repose moins sur « brancher un endpoint » que sur une <strong>planification complète</strong> : besoins clairs, technologie adaptée (REST), <strong>sécurité native</strong> (ne jamais traiter la CB en clair), tests robustes, mise en production progressive et pilotage continu. C&rsquo;est exactement l&rsquo;approche du chapitre 5 pour intégrer un tiers dans le SI de façon <strong>sécurisée, évolutive et maintenable</strong>.</p>
+<footer class="doc-footer">
+  <span>Livecampus — Stratégie SI</span>
+  <span>Groupe G1 — MINI CAS 5</span>
+</footer>
+</div>
+</body>
+</html>
