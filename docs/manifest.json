@@ -1,6 +1,6 @@
 {
   "title": "Stratégie SI",
-  "generated": "2026-11-17",
+  "generated": "2026-11-19",
   "categories": [
     {
       "id": "cours",
@@ -25,6 +25,16 @@
           "id": "chapitre-3-les-principes-d-evolutivite-du-si-soa-api-micro-services",
           "title": "Chapitre 3 – Les principes d'évolutivité du SI : SOA, API, Micro-services",
           "path": "pages/cours/chapitre-3-les-principes-d-evolutivite-du-si-soa-api-micro-services.html"
+        },
+        {
+          "id": "chapitre-4-la-gestion-des-changements-et-des-risques-lies-aux-evolutions-du-si",
+          "title": "Chapitre 4 – La gestion des changements et des risques liés aux évolutions du SI",
+          "path": "pages/cours/chapitre-4-la-gestion-des-changements-et-des-risques-lies-aux-evolutions-du-si.html"
+        },
+        {
+          "id": "chapitre-5-planification-de-l-integration-de-tiers-dans-le-si-api-etl-web-services",
+          "title": "Chapitre 5 – Planification de l'intégration de tiers dans le SI : API, ETL, Web Services",
+          "path": "pages/cours/chapitre-5-planification-de-l-integration-de-tiers-dans-le-si-api-etl-web-services.html"
         }
       ]
     },
