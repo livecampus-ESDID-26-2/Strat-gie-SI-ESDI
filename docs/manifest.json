@@ -51,6 +51,11 @@
           "id": "STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N2",
           "title": "QUIZ N2",
           "path": "pages/qcm/STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N2.html"
+        },
+        {
+          "id": "STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N4",
+          "title": "QUIZ N4",
+          "path": "pages/qcm/STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N4.html"
         }
       ]
     },
