@@ -1,6 +1,6 @@
 {
   "title": "Stratégie SI",
-  "generated": "2026-11-19",
+  "generated": "2026-11-20",
   "categories": [
     {
       "id": "cours",
@@ -35,6 +35,16 @@
           "id": "chapitre-5-planification-de-l-integration-de-tiers-dans-le-si-api-etl-web-services",
           "title": "Chapitre 5 – Planification de l'intégration de tiers dans le SI : API, ETL, Web Services",
           "path": "pages/cours/chapitre-5-planification-de-l-integration-de-tiers-dans-le-si-api-etl-web-services.html"
+        },
+        {
+          "id": "chapitre-6-politique-de-securite-du-si-pca-pra",
+          "title": "Chapitre 6 – Politique de sécurité du SI : PCA, PRA",
+          "path": "pages/cours/chapitre-6-politique-de-securite-du-si-pca-pra.html"
+        },
+        {
+          "id": "chapitre-7-gestion-des-non-conformites-du-si-audit-revue-de-code-tests-de-securite",
+          "title": "Chapitre 7 – Gestion des non-conformités du SI : audit, revue de code, tests de sécurité",
+          "path": "pages/cours/chapitre-7-gestion-des-non-conformites-du-si-audit-revue-de-code-tests-de-securite.html"
         }
       ]
     },
@@ -56,6 +66,11 @@
           "id": "STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N4",
           "title": "QUIZ N4",
           "path": "pages/qcm/STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N4.html"
+        },
+        {
+          "id": "STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N6",
+          "title": "QUIZ N6",
+          "path": "pages/qcm/STRATEGIE_SI_MASIA_ANTOINE_QUIZ_N6.html"
         }
       ]
     },
